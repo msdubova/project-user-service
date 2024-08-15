@@ -34,7 +34,7 @@ func main() {
 	mux.HandleFunc("POST /users", userHandler.Create)
 
 	authenticatedRouter.HandleFunc("GET /users", userHandler.GetUsers)
-	authenticatedRouter.HandleFunc("GET /users/{id}", userHandler.GetUserById)
+	// authenticatedRouter.HandleFunc("GET /users/{id}", userHandler.GetUserById)
 	authenticatedRouter.HandleFunc("/admin/block/{id}", userHandler.BlockUser)
 	authenticatedRouter.HandleFunc("/admin/limit/{id}", userHandler.BlockUser)
 	authenticatedRouter.HandleFunc("PATCH /users/{id}", userHandler.UpdateUser)
